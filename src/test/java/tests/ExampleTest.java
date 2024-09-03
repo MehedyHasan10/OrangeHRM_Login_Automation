@@ -11,7 +11,7 @@ public class ExampleTest extends BaseTest {
             "You logged into a secure area!"));
 
     private final By ERROR_AUTH = By.xpath(String.format(PARTICULAR_TEXT_XPATH,
-            "Your username or password is invalid!"));
+            "Your username is invalid!"));
 
     @Test
     public void successfulLoginTest() {
@@ -45,6 +45,7 @@ public class ExampleTest extends BaseTest {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         // Assert that the error message is displayed
+
         Assert.assertTrue(driver.findElement(ERROR_AUTH).isDisplayed(),
                 "Login did not fail as expected: Error message not found.");
 
