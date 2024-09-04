@@ -15,7 +15,7 @@ public class BasicAuthTest extends BaseTest{
 
 
     @BeforeMethod
-    public void basicAuth(){
+    public void basicAuth(){  //this part paste from selenium website
         HasAuthentication authentication = (HasAuthentication) driver;
         authentication.register(() -> new UsernameAndPassword("admin", "admin"));
     }
