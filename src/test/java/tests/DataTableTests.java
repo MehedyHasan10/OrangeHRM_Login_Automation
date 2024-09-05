@@ -28,8 +28,8 @@ public class DataTableTests extends BaseTest {
             }
         }
 
-        // Print the calculated sum for debugging purposes
-        System.out.println("Calculated sum: " + actualSum);
+        // For debugging purposes
+       // System.out.println("Calculated sum: " + actualSum);
 
         // Assert that the actual sum matches the expected sum
         Assert.assertEquals(actualSum, EXPECTED_SUM, "Sum is not correct");

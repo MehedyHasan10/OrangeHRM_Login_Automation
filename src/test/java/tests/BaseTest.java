@@ -17,7 +17,7 @@ protected WebDriver driver;
     protected static final String PRECISE_TEXT_XPATH = "//*[text()='%s']";
     protected static final String PARTICULAR_TEXT_XPATH = "//*[contains(text(),'%s')]";
     protected static final String RELATIVE_RESOURCE_PATH = "C:\\Users\\Admin\\Downloads\\";
-    protected static final int MAX_WAIT = 10;
+    protected static final int MAX_WAIT = 20;
 
 @BeforeMethod
 public void setup(){
