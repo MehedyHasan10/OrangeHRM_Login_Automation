@@ -12,13 +12,13 @@ import java.util.concurrent.TimeUnit;
 public class FileDownloadTest extends BaseTest {
 
     private final By FILE_DOWNLOAD = By.xpath(String.format(PRECISE_TEXT_XPATH, "File Download"));
-    private final String FILE_NAME = "test.txt";
+    private final String FILE_NAME = "text.txt";
     private final By FILE_NAME_XPATH = By.xpath(String.format(PARTICULAR_TEXT_XPATH, FILE_NAME));
     private final String FILE_PATH = RELATIVE_RESOURCE_PATH + FILE_NAME;
     private final File downloadedFile = new File(FILE_PATH);
 
     @Test
-    public void fileUploadTest() {
+    public void fileDownloadTest() {
         driver.findElement(FILE_DOWNLOAD).click();
         Assert.assertTrue(driver.findElement(FILE_NAME_XPATH).isDisplayed(), "File is not displayed");
         driver.findElement(FILE_NAME_XPATH).click();
