@@ -10,6 +10,7 @@ public class AlertTest extends BaseTest {
     private final By JS_ALERT = By.xpath(String.format(PRECISE_TEXT_XPATH, "JavaScript Alerts"));
     private final By JS_ALERT_BUTTON = By.xpath("//button[@onclick='jsAlert()']");
     private final By RESULT_TEXT = By.id("result");
+    private final String expectedMessage ="You successfully clicked an alert";
 
     @Test
     public void alertTest() {
@@ -22,7 +23,6 @@ public class AlertTest extends BaseTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(RESULT_TEXT));
 
         // Asserts that the result message displays the correct text
-        String expectedMessage = "You successfully clicked an alert";
         String actualMessage = driver.findElement(RESULT_TEXT).getText();
         Assert.assertEquals(actualMessage, expectedMessage, "Success message is not displayed as expected");
     }
