@@ -14,7 +14,7 @@ public class FileUploadTest extends BaseTest {
     private final By UPLOAD_BUTTON = By.id("file-submit");
     private final By UPLOADED_FILE_NAME = By.id("uploaded-files");
     private final String FILE_NAME = "a1qa.jpg";
-    private final String FILE_PATH = RELATIVE_RESOURCE_PATH + FILE_NAME;
+    private final String FILE_PATH = PATH + FILE_NAME;
     private final File uploadFile = new File(FILE_PATH);
 
     @Test
