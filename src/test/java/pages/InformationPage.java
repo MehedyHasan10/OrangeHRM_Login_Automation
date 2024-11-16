@@ -9,7 +9,7 @@ public class InformationPage extends Form {
     private final ILabel informationHeader = getElementFactory().getLabel(By.xpath("//h1[@id='firstHeading']"), "Information Header");
 
     public InformationPage() {
-        super(By.xpath("//h2[@id='Contents']"), "Information Page");
+        super(By.xpath("//h2[@id='Contents']"), "Wikipedia Information Page");
     }
 
     @Step("Check the information page article is displayed")
