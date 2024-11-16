@@ -12,8 +12,8 @@ public class InformationPage extends Form {
         super(By.xpath("//h2[@id='Contents']"),"Information Page");
     }
 
-    @Step("Check if the information header is displayed")
-    public boolean isHeaderDisplayed() {
-        return informationHeader.state().isDisplayed();
+    @Step("Check the information page article is displayed")
+    public String forInformationHeaderText() { 
+        return informationHeader.getText();
     }
 }

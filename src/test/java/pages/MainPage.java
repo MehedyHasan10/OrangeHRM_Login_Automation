@@ -5,6 +5,7 @@ import aquality.selenium.elements.interfaces.IButton;
 import aquality.selenium.elements.interfaces.IComboBox;
 import aquality.selenium.elements.interfaces.ITextBox;
 import aquality.selenium.forms.Form;
+import constants.Languages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
@@ -23,8 +24,8 @@ public class MainPage extends Form {
     }
 
     @Step("Select language: {language}")
-    public void selectForLanguage(String language) {
-        languageButton.clickAndSelectByText(language);
+    public void selectForLanguage(Languages language) {
+        languageButton.selectByValue(language.getValue());
     }
 
     @Step("Click the submit button")

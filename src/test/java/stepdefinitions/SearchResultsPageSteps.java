@@ -5,10 +5,10 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pages.SearchResultsPage;
 
-public class SearchResultsSteps {
+public class SearchResultsPageSteps {
     private final SearchResultsPage searchResultsPage = new SearchResultsPage();
     
-    @Then("^The article page for \"(.*)\" should be open$")
+    @Then("The article page for {string} should be open")
     public void articlePageIsOpen(String articleTitle) {
         Assert.assertEquals(articleTitle,searchResultsPage.forResultHeaderText(),"The article page is not opened");
     }

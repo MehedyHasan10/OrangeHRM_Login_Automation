@@ -10,7 +10,7 @@ import java.io.File;
 
 import static aquality.selenium.browser.AqualityServices.getBrowser;
 
-public class PdfDownloadSteps {
+public class PdfDownloadPageSteps {
     private final PdfDownloadPage pdfDownloadPage = new PdfDownloadPage();
     private final String downloadDirectory = getBrowser().getDownloadDirectory();
 

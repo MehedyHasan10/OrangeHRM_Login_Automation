@@ -13,7 +13,7 @@ public class SearchResultsPage extends Form {
     private final IButton pageInfoButton = getElementFactory().getButton(By.xpath("//li[@id='t-info']"), "Click Page Information Button");
 
     public SearchResultsPage() {
-        super(By.xpath("//header[@class='vector-header mw-header']"), "Wikipedia Search Results Page");
+        super(By.xpath("//header[@class='vector-header mw-header']"),"Wikipedia Search Results Page");
     }
 
     @Step("Get the search result header text")

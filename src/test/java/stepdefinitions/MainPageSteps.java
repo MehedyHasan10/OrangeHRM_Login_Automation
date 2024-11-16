@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import constants.Languages;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
@@ -13,14 +14,15 @@ public class MainPageSteps {
         Assert. assertTrue(mainPage.state().isDisplayed(), "Main Page is not displayed");
     }
 
-    @When("^I input \"(.*)\" in the search field$")
+    @When("I input {string} in the search field")
     public void forSearchName(String name){
         mainPage.searchForName(name);
     }
 
-    @When("^I select \"(.*)\" from the language dropdown$")
+    @When("I select {string} from the language dropdown")
     public void selectLanguage(String language){
-        mainPage.selectForLanguage(language);
+        Languages langEnum = Languages.valueOf(language.toUpperCase());
+        mainPage.selectForLanguage(langEnum);
     }
     
     @When("I click the submit button")
