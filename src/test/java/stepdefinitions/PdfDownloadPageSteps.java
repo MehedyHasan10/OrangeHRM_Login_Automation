@@ -15,12 +15,12 @@ public class PdfDownloadPageSteps {
     private final String downloadDirectory = getBrowser().getDownloadDirectory();
 
     @When("I click the download button")
-    public void clickDownloadButton(){
+    public void clickOnDownloadButton() {
         pdfDownloadPage.clickDownloadButton();
     }
-    
+
     @Then("The file should be downloaded")
-    public void isFileDownloaded(){
+    public void isFileDownloaded() {
         File downloadedFile = new File(downloadDirectory, pdfDownloadPage.getDownloadFileName());
         boolean isDownloaded = FileUtils.isFileExist(downloadedFile);
         Assert.assertTrue(isDownloaded, "File is not downloaded.");

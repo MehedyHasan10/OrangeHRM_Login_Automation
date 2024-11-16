@@ -7,24 +7,24 @@ import pages.SearchResultsPage;
 
 public class SearchResultsPageSteps {
     private final SearchResultsPage searchResultsPage = new SearchResultsPage();
-    
+
     @Then("The article page for {string} should be open")
-    public void articlePageIsOpen(String articleTitle) {
-        Assert.assertEquals(articleTitle,searchResultsPage.forResultHeaderText(),"The article page is not opened");
+    public void isArticlePageOpen(String articleTitle) {
+        Assert.assertEquals(articleTitle, searchResultsPage.getResultHeaderText(), "The article page is not opened");
     }
-    
+
     @When("I click the tools menu button")
-    public void clickToolsMenuButton(){
-        searchResultsPage.clickToolsMenu();
+    public void clickOnToolsMenuButton() {
+        searchResultsPage.clickToolsMenuButton();
     }
-    
+
     @When("I click  the Download as PDF button")
-    public void clickDownloadAsPdfButton(){
-        searchResultsPage.clickDownloadAsPdf();
+    public void clickOnDownloadAsPdfButton() {
+        searchResultsPage.clickDownloadAsPdfButton();
     }
-    
+
     @When("I click the Page information button")
-    public void clickPageInformation(){
-        searchResultsPage.clickPageInformation();
+    public void clickOnPageInformationButton() {
+        searchResultsPage.clickPageInformationButton();
     }
 }

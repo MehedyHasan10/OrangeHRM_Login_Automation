@@ -19,12 +19,12 @@ public class MainPage extends Form {
     }
 
     @Step("Type in search field with name: {name}")
-    public void searchForName(String name) {
+    public void inputSearchName(String name) {
         textNameInput.clearAndType(name);
     }
 
     @Step("Select language: {language}")
-    public void selectForLanguage(Languages language) {
+    public void selectLanguage(Languages language) {
         languageButton.selectByValue(language.getValue());
     }
 

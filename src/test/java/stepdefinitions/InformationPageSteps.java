@@ -8,7 +8,7 @@ public class InformationPageSteps {
     private final InformationPage informationPage = new InformationPage();
 
     @Then("Information page for {string} article is displayed")
-    public void isHeaderDisplayed(String informationTitle) {
-        Assert.assertTrue(informationPage.forInformationHeaderText().toLowerCase().contains(informationTitle.toLowerCase()), "The information header is not opened");
+    public void isInformationHeaderDisplayed(String informationTitle) {
+        Assert.assertTrue(informationPage.getInformationHeaderText().toLowerCase().contains(informationTitle.toLowerCase()), "The information header is not opened");
     }
 }

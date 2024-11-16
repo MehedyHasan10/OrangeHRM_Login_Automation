@@ -13,26 +13,26 @@ public class SearchResultsPage extends Form {
     private final IButton pageInfoButton = getElementFactory().getButton(By.xpath("//li[@id='t-info']"), "Click Page Information Button");
 
     public SearchResultsPage() {
-        super(By.xpath("//header[@class='vector-header mw-header']"),"Wikipedia Search Results Page");
+        super(By.xpath("//header[@class='vector-header mw-header']"), "Wikipedia Search Results Page");
     }
 
     @Step("Get the search result header text")
-    public String forResultHeaderText() {
+    public String getResultHeaderText() {
         return searchResultHeader.getText();
     }
 
     @Step("Click the Tools menu to open additional options")
-    public void clickToolsMenu() {
+    public void clickToolsMenuButton() {
         clickToolsMenuButton.click();
     }
 
     @Step("Click the 'Download as PDF' option")
-    public void clickDownloadAsPdf() {
+    public void clickDownloadAsPdfButton() {
         clickDownloadAsPdfButton.click();
     }
 
     @Step("Click the 'Page Information' option")
-    public void clickPageInformation() {
+    public void clickPageInformationButton() {
         pageInfoButton.click();
     }
 }
