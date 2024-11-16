@@ -7,8 +7,8 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 public class PdfDownloadPage extends Form {
-    private final IButton clickDownloadButton = getElementFactory().getButton(By.xpath("//button[@type='submit']"), "Click Download Button");
-    private final ILabel fileNameLabel = getElementFactory().getLabel(By.xpath("//div[@class='mw-electronpdfservice-selection-label-desc']"), "Check File Name");
+    private final IButton downloadButton = getElementFactory().getButton(By.xpath("//button[@type='submit']"), "Download Button");
+    private final ILabel fileNameLabel = getElementFactory().getLabel(By.xpath("//div[@class='mw-electronpdfservice-selection-label-desc']"), "File Name");
 
     public PdfDownloadPage() {
         super(By.xpath("//main[@id='content']"), "Wikipedia Pdf Download Page");
@@ -16,7 +16,7 @@ public class PdfDownloadPage extends Form {
 
     @Step("Click the download button to start the PDF download")
     public void clickDownloadButton() {
-        clickDownloadButton.click();
+        downloadButton.click();
     }
 
     @Step("Retrieve the name of the file to be downloaded")
