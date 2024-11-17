@@ -11,7 +11,7 @@ public class PdfDownloadPage extends Form {
     private final ILabel fileNameLabel = getElementFactory().getLabel(By.xpath("//div[@class='mw-electronpdfservice-selection-label-desc']"), "File Name");
 
     public PdfDownloadPage() {
-        super(By.xpath("//main[@id='content']"), "Wikipedia Pdf Download Page");
+        super(By.xpath("//div[@class='vector-header-start']"), "Wikipedia Pdf Download Page");
     }
 
     @Step("Click the download button to start the PDF download")
