@@ -18,7 +18,7 @@ public class DashboardPage extends Form {
         return dashboardHeader.getText();
     }
 
-    @Step("Show the use your current location")
+    @Step("Show the user name")
     public boolean isUserNameDisplayed() {
         return userNameLable.state().waitForDisplayed();
     }
