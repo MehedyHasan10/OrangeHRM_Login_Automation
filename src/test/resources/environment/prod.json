@@ -1,4 +1,4 @@
 {
-  "host": "https://www.wikipedia.org/",
-  "wait": 30
+  "host": "https://opensource-demo.orangehrmlive.com",
+  "wait": 60
 }
