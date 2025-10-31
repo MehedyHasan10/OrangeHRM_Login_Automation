@@ -3,9 +3,10 @@ Feature: OrangeHRM Successful Login
   Description:
   - User is on OrangeHRM login page
   - Browser is fully loaded
-  - Valid credentials are available (Admin/admin123)
+  - Validate successful login with valid credentials
 
-  Scenario: Successful login with valid credentials
+  @TC_LM_001
+  Scenario: Verify login with valid credentials
     When User enters username "Admin"
     And User enters password "admin123"
     And User clicks on login button
