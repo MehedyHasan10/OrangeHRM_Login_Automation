@@ -43,5 +43,4 @@ public class LoginPageSteps {
     public void getUserPasswordErrorMessage(String errorMessage) {
         Assert.assertTrue(loginPage.getUserPasswordErrorMessage().toLowerCase().contains(errorMessage.toLowerCase()), "User Password Error Message does not contain the expected text.");
     }
-    
 }
